@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Timer</title>
+    <link rel="stylesheet" href="chess.css">
+
+</head>
+<body>
+    <h1>Chess Timer</h1>
+    <label for="timeControl">Select Time Control:</label>
+    <select id="timeControl" onchange="setTime()">
+        <option value="600">10 Minutes</option>
+        <option value="300">5 Minutes</option>
+        <option value="180">3 Minutes</option>
+        <option value="60">1 Minute</option>
+    </select>
+    <div class="timer-container">
+        <div class="player" id="player1">
+            <h2>Player 1</h2>
+            <div class="time" id="time1">10:00</div>
+            <button onclick="switchTurn(1)">Switch</button>
+        </div>
+        <div class="player" id="player2">
+            <h2>Player 2</h2>
+            <div class="time" id="time2">10:00</div>
+            <button onclick="switchTurn(2)">Switch</button>
+        </div>
+    </div>
+    <script src="chess.js"></script>
+</body>
+</html>
